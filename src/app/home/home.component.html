@@ -1,0 +1,85 @@
+<!-- <div *ngIf="recommended" class="container">
+    <mat-card class="example-card" appearance="outlined" *ngFor="let flight of recommended">
+        <img mat-card-image [src]="[generateImageUrl(flight.destination)]" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <h1>{{flight.destination}}</h1>
+            <mat-list role="list">
+                <mat-list-item role="listitem">Scheduled at: {{formatDate(flight.scheduledAt)}}</mat-list-item>
+                <mat-list-item role="listitem">Flight number: {{flight.flightNumber}}</mat-list-item>
+                <mat-list-item role="listitem">Plain model:{{flight.plane}}</mat-list-item>
+            </mat-list>
+        </mat-card-content>
+        <mat-card-actions>
+            <a mat-button [routerLink]="['flight/',flight.id]">
+                <i class="fa-solid fa-circle-info"></i> Details</a>
+
+            <button mat-button>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>Book now</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<app-search-container [destinations]="destinations" [airlines]="airlines" [flightClass]="flightClass" /> -->
+<div class="container">
+    <mat-tab-group *ngIf="movie" animationDuration="3000ms">
+      <mat-tab label="Preporučeno">
+        <div class="card-container">
+          <mat-card class="example-card" appearance="outlined" *ngFor="let title of movie">
+            <img mat-card-image [src]="title.image" alt="Photo of a destination">
+            <mat-card-content>
+              <h1>{{title.title}}</h1>
+              <mat-list role="list">
+                <mat-list-item role="listitem">Genre: {{title.genre}}</mat-list-item>
+                <mat-list-item role="listitem">Date release: {{title.releaseDate}}</mat-list-item>
+                
+              </mat-list>
+            </mat-card-content>
+            <mat-card-actions style="display: flex; justify-content: center;">
+              <a mat-flat-button [routerLink]="['login/']">
+                <i class="fa-solid fa-circle-info"></i> Saznaj vise
+              </a>
+             </mat-card-actions>
+          </mat-card>
+        </div>
+      </mat-tab>
+      
+      <mat-tab label="U bioskopu">
+        <div class="card-container"> <!-- Ovo je kontejner za fleksibilan raspored kartica -->
+            <mat-card class="example-card" appearance="outlined" *ngFor="let title of movie">
+              <img mat-card-image [src]="generateImage(title.image)" alt="Photo of a destination">
+              <mat-card-content>
+                <h1>{{title.title}}</h1>
+                <mat-list role="list">
+                  <mat-list-item role="listitem">Scheduled at: {{title.genre}}</mat-list-item>
+                  <mat-list-item role="listitem">Flight number: {{title.releaseDate}}</mat-list-item>
+                 
+                </mat-list>
+              </mat-card-content>
+              <mat-card-actions style="display: flex; justify-content: center;">
+                <a mat-flat-button [routerLink]="['login/']">
+                  <i class="fa-solid fa-circle-info"></i> Saznaj više
+                </a>
+              </mat-card-actions>
+            </mat-card>
+          </div> 
+
+      </mat-tab>
+      <mat-tab label="Uskoro"><div class="card-container"> <!-- Ovo je kontejner za fleksibilan raspored kartica -->
+        <mat-card class="example-card" appearance="outlined" *ngFor="let title of movie">
+          <img mat-card-image [src]="title.image" alt="Photo of a destination">
+          <mat-card-content>
+            <h1>{{title.title}}</h1>
+            <mat-list role="list">
+              <mat-list-item role="listitem">Scheduled at: {{title.genre}}</mat-list-item>
+              <mat-list-item role="listitem">Flight number: {{title.releaseDate}}</mat-list-item>
+             
+            </mat-list>
+          </mat-card-content>
+          <mat-card-actions style="display: flex; justify-content: center;">
+            <a mat-flat-button [routerLink]="['login/']">
+              <i class="fa-solid fa-circle-info"></i> Saznaj više
+            </a>
+            </mat-card-actions>
+        </mat-card>
+      </div> </mat-tab>
+    </mat-tab-group>
+  </div>

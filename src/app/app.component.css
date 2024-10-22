@@ -1,0 +1,25 @@
+.spacer {
+    flex: 1 1 auto;
+} 
+mat-toolbar{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+
+}
+.logo > i {
+    font-size: 40px;
+    margin-right: 10px;
+
+}
+.title{
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.font{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+
+

@@ -1,0 +1,61 @@
+/* .example-card {
+    max-width: 200px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  p {
+    color: white !important;
+  }
+  .container{
+    
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+ .example-card {
+    height: 570px;
+ }
+ h1 {
+    color: white !important;
+ }
+ .search-card {
+    height: 200px;
+ }
+ .search-card {
+    width: 850px;
+    height: auto;
+ }
+ .search-form {
+    display: flex;
+    justify-content: left;
+    gap: 5px;
+ } */
+ .container {
+   width: 100%;
+   margin-top: 10px;
+
+}
+
+.card-container {
+   display: flex;
+   flex-wrap: wrap; /* Prelamanje u novi red ako nema dovoljno prostora */
+   /*justify-content: space-between; /* Kartice ravnomerno raspoređene */
+   gap: 20px; /* Manji razmak između kartica, smanjeno sa 30px na 10px */
+   padding: 87px; 
+   margin-top: auto;/* Unutrašnji razmak u kontejneru kartica */
+}
+
+.example-card {
+   width: 400px; /* Smanjena širina kartice */
+   height: auto; /* Visina automatski prilagođena sadržaju */
+   display: flex;
+   flex-direction: column;
+}
+a {
+   text-align: center;
+}
+ 
